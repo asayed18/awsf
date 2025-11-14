@@ -5,9 +5,9 @@
 [![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20Me-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/asayed18)
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/asayed18)
-[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-EA4AAA?logo=github-sponsors&logoColor=white)](https://github.com/sponsors/asayed18)
+[![Ko-fi](https://img.shields.io/badge/-Support-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/asayed18)
+[![Buy Me A Coffee](https://img.shields.io/badge/-Support-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/asayed18)
+[![GitHub Sponsors](https://img.shields.io/badge/-Sponsor-EA4AAA?logo=github-sponsors&logoColor=white)](https://github.com/sponsors/asayed18)
 
 > **Tired of the slow, clunky AWS Console search?** Clicking through multiple pages, waiting for searches to load, and navigating endless menus just to find a Lambda function or S3 bucket? 
 
