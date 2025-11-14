@@ -37,13 +37,37 @@ awsf
 brew install fzf python3
 
 # Clone and setup
-git clone https://github.com/yourusername/awsf.git
+git clone https://github.com/asayed18/awsf.git
 cd awsf
 ./scripts/setup.sh
 
 # Optional: Create app bundle for Spotlight
 ./scripts/create_macos_app.sh
 ```
+
+### Linux
+
+```bash
+# Install dependencies (Ubuntu/Debian)
+sudo apt update
+sudo apt install python3 python3-pip fzf awscli
+
+# Or Fedora/RHEL
+sudo dnf install python3 python3-pip fzf awscli
+
+# Or Arch Linux
+sudo pacman -S python python-pip fzf aws-cli
+
+# Clone and setup
+git clone https://github.com/asayed18/awsf.git
+cd awsf
+./scripts/setup.sh
+
+# Optional: Create desktop entry for application menu
+./scripts/create_linux_desktop.sh
+```
+
+📖 **For detailed Linux integration**, see [Linux Installation Guide](LINUX_INSTALL.md)
 
 ### Ubuntu/Debian
 
@@ -53,7 +77,7 @@ sudo apt update
 sudo apt install python3 python3-pip fzf awscli
 
 # Clone and setup
-git clone https://github.com/yourusername/awsf.git
+git clone https://github.com/asayed18/awsf.git
 cd awsf
 ./scripts/setup.sh
 ```
@@ -67,7 +91,7 @@ sudo yum install fzf  # or install manually
 pip3 install awscli
 
 # Clone and setup
-git clone https://github.com/yourusername/awsf.git
+git clone https://github.com/asayed18/awsf.git
 cd awsf
 ./scripts/setup.sh
 ```

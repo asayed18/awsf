@@ -72,9 +72,11 @@ if command -v fzf &> /dev/null; then
 else
     print_warning "fzf not found - fuzzy search functionality will be limited"
     echo "Install fzf:"
-    echo "  macOS: brew install fzf"
-    echo "  Ubuntu: sudo apt install fzf"
-    echo "  Manual: https://github.com/junegunn/fzf#installation"
+    echo "  macOS:        brew install fzf"
+    echo "  Ubuntu/Debian: sudo apt install fzf"
+    echo "  Fedora/RHEL:  sudo dnf install fzf"
+    echo "  Arch Linux:   sudo pacman -S fzf"
+    echo "  Manual:       https://github.com/junegunn/fzf#installation"
 fi
 
 # Check AWS CLI
@@ -166,11 +168,18 @@ echo ""
 echo "Next steps:"
 echo "1. Configure AWS if not done: aws configure"
 echo "2. Populate resources: python3 scripts/populate_resources.py"
-echo "3. Start searching: python3 src/aws_fuzzy_finder.py"
+echo "3. Start searching: python3 src/awsf.py"
 echo ""
 echo "Optional enhancements:"
 echo "• Install fzf for better fuzzy search experience"
 echo "• Add shell aliases for quick access"
-echo "• Run scripts/create_macos_app.sh for Spotlight integration (macOS only)"
+
+# Platform-specific integration
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    echo "• Run scripts/create_macos_app.sh for Spotlight integration (macOS)"
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    echo "• Run scripts/create_linux_desktop.sh for application menu integration (Linux)"
+fi
+
 echo ""
-print_success "AWS Fuzzy Finder is ready to use!"
+print_success "AWSF is ready to use!"

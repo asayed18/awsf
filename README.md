@@ -9,9 +9,9 @@
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/asayed18)
 [![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-EA4AAA?logo=github-sponsors&logoColor=white)](https://github.com/sponsors/asayed18)
 
-> A powerful, interactive fuzzy search tool for AWS resources. Search Lambda functions, S3 buckets, SQS queues, DynamoDB tables, RDS instances, Kinesis streams, and API Gateway APIs with lightning-fast fuzzy matching. Built for developers and DevOps engineers who need to quickly find and access AWS resources.
+> **Tired of the slow, clunky AWS Console search?** Clicking through multiple pages, waiting for searches to load, and navigating endless menus just to find a Lambda function or S3 bucket? 
 
-**Keywords**: AWS CLI, AWS Console, fuzzy finder, fzf, AWS Lambda, S3, SQS, DynamoDB, RDS, Kinesis, API Gateway, DevOps tools, cloud infrastructure, AWS resource management
+**AWSF** is your solution - a lightning-fast, keyboard-driven fuzzy finder that brings all your AWS resources to your fingertips. Search Lambda functions, S3 buckets, SQS queues, DynamoDB tables, RDS instances, Kinesis streams, and API Gateway APIs instantly with fuzzy matching. No more frustration, no more waiting - just type and go.
 
 ## 🎬 Demo
 
@@ -21,7 +21,7 @@
 
 ## ✨ Features
 
-- **🔍 Fuzzy Search**: Lightning-fast fuzzy search across all your AWS resources
+- **🔍 Fuzzy Search**: Lightning-fast fuzzy search across all your AWS resources - no more sluggish console searches
 - **🎯 Service-Specific Search**: Target specific AWS services (e.g., `lambda payment`, `s3 media`)
 - **🏷️ Environment Detection**: Automatically detects and displays environment indicators (PROD, STAGE, DEV)
 - **⚡ Quick Actions**: 
@@ -48,7 +48,11 @@
 
 - **Python 3.6+**
 - **AWS CLI** configured (`aws configure`) or environment variables
-- **fzf** fuzzy finder (`brew install fzf` on macOS)
+- **fzf** fuzzy finder:
+  - macOS: `brew install fzf`
+  - Ubuntu/Debian: `sudo apt install fzf`
+  - Fedora/RHEL: `sudo dnf install fzf`
+  - Arch Linux: `sudo pacman -S fzf`
 - **boto3** Python library (`pip install boto3`)
 
 ## 🛠️ Installation
@@ -85,6 +89,27 @@ ln -s /path/to/awsf/awsf /usr/local/bin/awsf
 # Optional: Create app bundle for Spotlight integration
 ./scripts/create_macos_app.sh
 ```
+
+### Linux Integration
+
+```bash
+# Add to your shell profile
+echo 'alias awsf="/path/to/awsf/src/awsf.py"' >> ~/.bashrc
+
+# Or create a symlink
+sudo ln -s /path/to/awsf/src/awsf.py /usr/local/bin/awsf
+
+# Optional: Create desktop entry for application menu integration
+./scripts/create_linux_desktop.sh
+
+# The script will:
+# • Create a .desktop file in ~/.local/share/applications
+# • Add AWSF to your application menu
+# • Create a launcher in ~/.local/bin/awsf
+# • Generate an icon for the app
+```
+
+📖 **See [Linux Installation Guide](docs/LINUX_INSTALL.md)** for detailed instructions, desktop environment integration, and troubleshooting.
 
 ### System Integration
 
