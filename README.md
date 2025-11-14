@@ -4,12 +4,9 @@ A powerful, interactive fuzzy search tool for AWS resources across multiple serv
 
 ## 🎬 Demo
 
-<!-- Uncomment when demo GIF is uploaded -->
-<!-- ![AWSF Demo](docs/demo.gif) -->
+![AWSF Demo](docs/demo.gif)
 
-> **📹 Demo**: A demo GIF showing AWSF in action will be added soon. See the [Demo Guide](docs/DEMO_GUIDE.md) for recording instructions.
-> 
-> **Quick Preview**: Search, filter, and open AWS resources in seconds with an intuitive fuzzy finder interface.
+> Search, filter, and open AWS resources in seconds with an intuitive fuzzy finder interface.
 
 ## ✨ Features
 
@@ -49,7 +46,7 @@ A powerful, interactive fuzzy search tool for AWS resources across multiple serv
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/awsf.git
+git clone https://github.com/asayed18/awsf.git
 cd awsf
 
 # Install dependencies
@@ -196,90 +193,6 @@ awsf --settings
 # Select option 1: "Repopulate resource list"
 ```
 
-## 🎨 Interface Guide
-
-### Main Search Interface
-
-```
-🔍 Search AWS Resources (Enter=Open, Ctrl+C=Copy URL)
-☁️ Search: █
-┌─────────────────────────────────────────────────────────────────┐
-│ my-api-function | λ Lambda | 🟢 PROD                             │
-│ user-data-bucket | 🪣 S3 | 🔵 DEV                               │
-│ payment-queue | 📬 SQS | 🟡 STAGE                               │
-└─────────────────────────────────────────────────────────────────┘
-╭─── 📋 Resource Details ───╮
-│ 🏷️  Name: my-api-function
-│ 🔧 Service: λ Lambda  
-│ 🌍 Environment: 🟢 PROD
-│ 🔗 Console: https://console.aws.amazon.com/lambda/...
-│
-│ 💡 Press Enter to open in AWS Console
-│ 💡 Press Ctrl+C to copy URL to clipboard
-╰─────────────────────────────╯
-```
-
-### Settings Menu
-
-```
-🛠️  AWS Fuzzy Finder Settings
-==================================================
-
-📋 Available Actions:
-  1. 🔄 Repopulate resource list
-  2. 🎛️  Toggle services  
-  3. 📊 View current settings
-  4. ⚙️  Edit configuration
-  5. 🔙 Back to search
-```
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**❌ fzf not found**
-```bash
-# Install fzf
-brew install fzf  # macOS
-sudo apt install fzf  # Ubuntu
-```
-
-**❌ AWS credentials error**
-```bash
-# Configure AWS
-aws configure
-
-# Or set environment variables
-export AWS_ACCESS_KEY_ID="your-key"
-export AWS_SECRET_ACCESS_KEY="your-secret"
-```
-
-**❌ No resources found**
-```bash
-# Populate resources first
-python3 scripts/populate_resources.py
-
-# Check your AWS permissions
-aws sts get-caller-identity
-```
-
-**❌ Permission denied errors**
-```bash
-# Make scripts executable
-chmod +x scripts/*.py
-chmod +x src/*.py
-```
-
-### Debug Mode
-
-Enable verbose logging:
-
-```bash
-# Set debug environment variable
-export AWSF_DEBUG=1
-awsf
-```
-
 ## 🔐 IAM Permissions
 
 Minimum required IAM permissions for resource discovery:
@@ -310,13 +223,7 @@ Minimum required IAM permissions for resource discovery:
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
 
@@ -326,13 +233,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [fzf](https://github.com/junegunn/fzf) - The amazing fuzzy finder that powers our interface
 - [boto3](https://github.com/boto/boto3) - AWS SDK for Python
-- AWS Community - For inspiration and feedback
-
-## 📞 Support
-
-- 🐛 **Bug Reports**: [Open an issue](https://github.com/yourusername/awsf/issues)
-- 💡 **Feature Requests**: [Open an issue](https://github.com/yourusername/awsf/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/awsf/discussions)
 
 ---
 
